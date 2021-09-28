@@ -125,11 +125,32 @@ section {
   text-align: center;
 }
 
+/* Removed code when we consolidated
+.intro h2 {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-bottom: 3px solid;
+  border-color: #fce138;
+
+  */
+
+  /* this will make the yellow line not go all the way across
+    the screen.  inline-block keeps padding like a block but
+    is now inline */
+  display: inline-block;
+
+}
+
 .intro p {
   line-height: 1.7;
   color: #39a6b2;
   width: 80%;
   font-size: 20px;
+  /* Used to center the block element text */
+  /* this sets a top margin of 0 and a right margin of auto
+  which makes them even, or centers the item */
   margin: 0 auto;
 }
 
@@ -137,31 +158,35 @@ section {
   text-align: center;
   background: #fce138;
 }
-
+/*  Removed when consolidated into .section-title 
+.steps h2 {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-bottom: 3px solid;
+  border-color:#39a6b2;
+}
+*/
 .steps div {
   margin-bottom: 80px;
 }
-
 .steps img {
   width: 15%;
   margin: 10px 0;
 }
-
 .steps h3 {
   color: #024e76;
   font-size: 46px;
   margin-top: 10px;
 }
-
 .steps p {
   color: #39a6b2;
   font-size: 23px;
 }
-
 .steps span {
   font-size: 38px;
 }
-
 .section-title {
   font-size: 55px;
   color: #024e76;
@@ -178,8 +203,5 @@ section {
 .secondary-border {
   border-color: #39a6b2;
 }
-.trainers {
-  text-align: center;
-  width: 900px;
-  margin: 0 auto 30px auto;
-}
+
+
