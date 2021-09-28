@@ -125,6 +125,7 @@ section {
   text-align: center;
 }
 
+/* Removed code when we consolidated
 .intro h2 {
   font-size: 55px;
   color: #024e76;
@@ -132,6 +133,8 @@ section {
   padding: 0 100px 20px 100px;
   border-bottom: 3px solid;
   border-color: #fce138;
+
+  */
 
   /* this will make the yellow line not go all the way across
     the screen.  inline-block keeps padding like a block but
@@ -150,3 +153,55 @@ section {
   which makes them even, or centers the item */
   margin: 0 auto;
 }
+
+.steps {
+  text-align: center;
+  background: #fce138;
+}
+/*  Removed when consolidated into .section-title 
+.steps h2 {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-bottom: 3px solid;
+  border-color:#39a6b2;
+}
+*/
+.steps div {
+  margin-bottom: 80px;
+}
+.steps img {
+  width: 15%;
+  margin: 10px 0;
+}
+.steps h3 {
+  color: #024e76;
+  font-size: 46px;
+  margin-top: 10px;
+}
+.steps p {
+  color: #39a6b2;
+  font-size: 23px;
+}
+.steps span {
+  font-size: 38px;
+}
+.section-title {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+
+.primary-border {
+  border-color: #fce138;
+}
+
+.secondary-border {
+  border-color: #39a6b2;
+}
+
+
