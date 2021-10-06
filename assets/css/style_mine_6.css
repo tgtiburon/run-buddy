@@ -40,14 +40,22 @@ header nav {
   margin: 7px 0;
 }
 
-header nav ul li {
-  display: inline;
+header nav ul {
+  display:flex;
+  flex-wrap: wrap;
+  /* justify-content operates on main axis */
+  justify-content: space-between;
+  /*align-items operates on perpendicular axis*/
+  align-items: center;
+  list-style: none;
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 22px;
+  /* vw means viewport width 
+    1.55% of the window's width */
+  font-size: 1.55vw;
 }
 
 footer {
