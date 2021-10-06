@@ -14,6 +14,13 @@ body {
 header {
   padding: 20px 35px;
   background-color: #39a6b2;
+  /* Makes the <header> a row by default
+    both <h1> and <nav> are block level by default
+    but flex overrides it */
+  display: flex; 
+  /*Puts all of the unused space between the two elements*/
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -21,7 +28,7 @@ header h1 {
   font-size: 36px;
   color: #fce138;
   margin: 0;
-  display: inline;
+  
 }
 header a {
   text-decoration: none;
@@ -29,7 +36,7 @@ header a {
 }
 
 header nav {
-  float: right;
+  
   margin: 7px 0;
 }
 
