@@ -366,24 +366,100 @@ section {
     at the bottom of the stylesheet */
 /* Media Query for a smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
-  header h1 a {
+  header  {
     /* this will be applied on any screen smaller than 980px */
-    
+    padding-bottom:0;
+    justify-content: center;
 
+  }
+  header h1 {
+    /*This will be applied on any screen between 768 and 575px */
+      width: 100%;
+      text-align: center;
+  }
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  header nav ul li a {
+    font-size: 20px;
+  }
+  footer h2, footer div {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  .hero-cta {
+    text-align: center;
+  }
+  .section-title {
+    /* makes titles wider on smaller screen */
+    width: 80%;
+  
+  }
+  .trainer {
+    /* to make trainer cards fill the screen we made them big enough
+        that only one could fit on each row. */
+    flex: 0 75%;
+  }
+  .contact-info iframe {
+    /* google map gets its own row */
+    flex: 1 100%;
   }
 }
 /* Media Query for tablets and smaller */
 @media screen and (max-width: 768px) {
-  header h1 {
-    /*This will be applied on any screen between 768 and 575px */
+  section {
+    padding: 30px 15px;
+
+  }
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
     
   }
+  .step-info {
+    flex:2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .step-img {
+    flex:0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .step-text {
+    flex: 100%;
+  }
+
 }
 
 /*Media query for Phones and smaller */
 @media screen and (max-width: 575px) {
-  header h1 {
+  .hero-form button {
     /* this will be applied on any screen smaller than 575px */
-    
+    width: 100%;
+  }
+  .section-title {
+    width: 95%;
+  }
+  .intro p {
+    width: 100%;
+  }
+  .trainer {
+    flex: 0 100%;
+  }
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info > * {
+    flex:0 100%;
+  }
+  .contact-form {
+    order: 3;
   }
 }
