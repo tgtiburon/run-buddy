@@ -18,17 +18,6 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* make the header stay at the top */
-  /* safari does not support this year so we need -webkit */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  /* Make the header look like part of the hero */
-  background-image: url("../images/hero-bg.jpg");
-  background-size: cover;
-  border-radius: 15px;
-  background-attachment: fixed;
-  background-position: 80%;
 }
 
 header h1 {
@@ -36,11 +25,6 @@ header h1 {
   margin: 0;
   font-size: 36px;
   color: #fce138;
-    /* first 0 is no horizontal offset
-      second 0 no vertical offset
-      10px radius of the blur
-      rgba sets color and alpha */
-      text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 header a {
@@ -64,18 +48,6 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
-    /* first 0 is no horizontal offset
-      second 0 no vertical offset
-      10px radius of the blur
-      rgba sets color and alpha */
-      text-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-header nav ul li a:hover {
-  background: #fce138;
-  color: #024e76;
-  border-radius: 15px;
-  text-shadow: none;
 }
 
 /* HEADER / NAVBAR STYLES END */
@@ -122,10 +94,6 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
-  /*makes the menu and hero not move 
-    next two lines placed in both places */
-  background-attachment: fixed;
-  background-position: 80%;
 }
 
 .hero-cta {
@@ -141,19 +109,15 @@ section {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-form {
   border: 3px solid #024e76;
-  /* background-color: #fce138; */
-  background-color:  rgba(252, 225, 56, .80);
+  background-color: #fce138;
   padding: 20px;
   color: #024e76;
   width: 40%;
   margin: 3.5%;
-  /* round the corners */
-  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -172,14 +136,6 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px; 
-  border-radius: 15px;
-  background-color: rgba(255,255,255, 0.75);
-
-}
-.form-input:focus {
-  background-color: rgba(255,255,255,1);
-  outline:none;
-
 }
 
 .hero-form label {
@@ -192,11 +148,7 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 15px;
 } 
-.hero-form button:hover {
-  background-color: #39a6b2;
-}
 /* HERO STYLES END */
 
 
@@ -242,15 +194,11 @@ section {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  
+  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-/*apply a border to all that are not the last child */
-.step:not(:last-child) {
-  border-bottom: 1px solid #39a6b2;
 }
 
 .step h3 {
@@ -381,11 +329,6 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
-  border-radius: 15px;
-  background-color: rgba(255,255,255,.75);
-}
-.contact-form input:focus, .contact-form textarea:focus{
-  background-color: rgba(255,255,255,1);
 }
 
 .contact-form button {
@@ -396,13 +339,6 @@ section {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
-  border-radius: 15px;
- 
-}
-
-.contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
 }
 
 .contact-info a {
@@ -425,114 +361,104 @@ section {
   display: flex;
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+/* Media query go at the end of the CSS Stylesheet
+    they should go from large size to small and be 
+    at the bottom of the stylesheet */
+/* Media Query for a smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
-  header {
-    padding-bottom: 0;
+  header  {
+    /* this will be applied on any screen smaller than 980px */
+    padding-bottom:0;
     justify-content: center;
-    /*undo stickiness for menu on smaller devices */
-    position: relative;
-  }
 
+  }
   header h1 {
-    width: 100%;
-    text-align: center;
-  
-
+    /*This will be applied on any screen between 768 and 575px */
+      width: 100%;
+      text-align: center;
   }
-
   header nav ul {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
   }
-
   header nav ul li a {
     font-size: 20px;
-   
   }
-
   footer h2, footer div {
     text-align: center;
     width: 100%;
   }
-
   .hero-cta, .hero-form {
     width: 100%;
   }
-  
   .hero-cta {
     text-align: center;
   }
-
   .section-title {
+    /* makes titles wider on smaller screen */
     width: 80%;
-  }
   
+  }
   .trainer {
-    flex: 0 70%;
+    /* to make trainer cards fill the screen we made them big enough
+        that only one could fit on each row. */
+    flex: 0 75%;
   }
-  
-  .contact-info iframe{
+  .contact-info iframe {
+    /* google map gets its own row */
     flex: 1 100%;
   }
 }
-
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
+/* Media Query for tablets and smaller */
 @media screen and (max-width: 768px) {
   section {
     padding: 30px 15px;
-  }
 
+  }
   .step h3 {
     flex: 1 100%;
     text-align: center;
+    
   }
-
   .step-info {
-    flex: 2 100%;
+    flex:2 100%;
     text-align: center;
     justify-content: center;
   }
-
   .step-img {
-    flex: 0 32%;
+    flex:0 32%;
     margin-right: 0;
     margin-top: 15px;
     margin-bottom: 15px;
   }
-
   .step-text {
-    flex: 100%;  
+    flex: 100%;
   }
+
 }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/*Media query for Phones and smaller */
 @media screen and (max-width: 575px) {
   .hero-form button {
+    /* this will be applied on any screen smaller than 575px */
     width: 100%;
   }
-
   .section-title {
     width: 95%;
   }
-
   .intro p {
     width: 100%;
   }
-
   .trainer {
     flex: 0 100%;
   }
-
   .contact-info {
     text-align: center;
   }
-
   .contact-info > * {
-    flex: 0 100%;
+    flex:0 100%;
   }
-
   .contact-form {
     order: 3;
   }
